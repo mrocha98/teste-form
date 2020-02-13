@@ -1,4 +1,4 @@
-# Teste de Rota
+# Teste de formulário por etapas
 
 Olá Dev! Tudo bem?
 
@@ -49,7 +49,7 @@ Após terminar o desafio, você pode solicitar um pull request para a branch mas
 
 ## Só isso?
 
-Só! Mas se quiser fazer a diferença, tente utilizar o localstorage para salvar os dados.
+Só! Mas se quiser fazer a diferença, tente utilizar componentes no teste.
 
 Boa sorte! :)
 
