@@ -2,7 +2,7 @@
 
 Olá Dev! Tudo bem?
 
-Nós estamos sempre em busca de profissionais interessantes e interessados, com boa capacidade de aprendizado, adaptação e principalmente bom senso!
+Nós estamos sempre em busca de profissionais interessantes e interessados, com boa capacidade de aprendizado e adaptação.
 
 Este teste tem como objetivo avaliar e desafiar você. 
 
