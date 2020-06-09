@@ -13,6 +13,7 @@ export default function StoreProvider({ children }) {
         time: '',
       },
       weight: 0,
+      trackingCode: '',
     },
   });
 
