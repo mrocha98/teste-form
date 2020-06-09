@@ -17,6 +17,10 @@ export default function StoreProvider({ children }) {
       wantsToInsertValue: true,
       value: 0,
       modality: 0,
+      location: {
+        origin: '',
+        destiny: '',
+      },
     },
   });
 
