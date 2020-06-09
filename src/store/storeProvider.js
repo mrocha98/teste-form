@@ -16,6 +16,7 @@ export default function StoreProvider({ children }) {
       trackingCode: '',
       wantsToInsertValue: true,
       value: 0,
+      modality: 0,
     },
   });
 
