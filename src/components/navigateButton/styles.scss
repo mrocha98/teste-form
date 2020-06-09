@@ -1,0 +1,11 @@
+.next-button {
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 108px;
+  max-width: 600px;
+  width: 70%;
+
+  @media (min-width: 600px) {
+    width: 50%;
+  }
+}

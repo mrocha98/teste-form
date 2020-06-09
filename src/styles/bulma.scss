@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import './colors';
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Bulma's global variables
+$family-sans-serif: 'Roboto', sans-serif;
+$primary: $plum;
+$info: $ecstasy;
+$dark: $mine-shaft;
+
+// Bulma's component variables
+$body-background-color: $mercury;
+$box-background-color: $white;
+$title-color: $plum;
+
+// Import only what you need from Bulma
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/base/_all.sass';
+@import '../../node_modules/bulma/sass/helpers/_all.sass';
+@import '../../node_modules/bulma/sass/layout/section.sass';
+@import '../../node_modules/bulma/sass/form/_all.sass';
+@import '../../node_modules/bulma/sass/elements/box.sass';
+@import '../../node_modules/bulma/sass/elements/button.sass';
+@import '../../node_modules/bulma/sass/elements/icon.sass';
+@import '../../node_modules/bulma/sass/elements/image.sass';
+@import '../../node_modules/bulma/sass/elements/title';
+@import '../../node_modules/bulma/sass/components/navbar.sass';
