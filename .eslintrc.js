@@ -26,5 +26,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'jsx-a11y/label-has-associated-control': 'off',
+    camelcase: 'off',
   },
 };
