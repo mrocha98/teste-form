@@ -14,6 +14,8 @@ export default function StoreProvider({ children }) {
       },
       weight: 0,
       trackingCode: '',
+      wantsToInsertValue: true,
+      value: 0,
     },
   });
 
