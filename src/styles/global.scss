@@ -27,3 +27,18 @@ body,
     }
   }
 }
+
+form {
+  min-width: 600px;
+}
+
+.control {
+  .radio {
+    font-size: 1.2rem;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      transform: scale(1.5);
+    }
+  }
+}
