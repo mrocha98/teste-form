@@ -1,16 +1,15 @@
 import React from 'react';
 
-function NumberCircle({ className = '', number }) {
+function NumberCircle({ className = '', number, isSmall = false }) {
+  const sizeInClassName = isSmall ? 'is-48x48' : 'is-96x96';
   return (
-    <div>
-      <figure className={`image is-96x96 ${className}`}>
-        <img
-          className="is-rounded"
-          src={`https://dummyimage.com/192/92278e/ffffff.jpg&text=${number}`}
-          alt={`etapa ${number}`}
-        />
-      </figure>
-    </div>
+    <figure className={`image ${sizeInClassName} ${className}`}>
+      <img
+        className="is-rounded"
+        src={`https://dummyimage.com/192/92278e/ffffff.jpg&text=${number}`}
+        alt={`etapa ${number}`}
+      />
+    </figure>
   );
 }
 
