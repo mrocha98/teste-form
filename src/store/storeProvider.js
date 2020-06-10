@@ -22,6 +22,7 @@ export default function StoreProvider({ children }) {
         destiny: '',
       },
       vehicleTypes: [],
+      bodyworkTypes: [],
     },
   });
 
