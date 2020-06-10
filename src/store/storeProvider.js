@@ -24,6 +24,7 @@ export default function StoreProvider({ children }) {
       vehicleTypes: [],
       bodyworkTypes: [],
       technologyTypes: [],
+      observation: '',
     },
   });
 
