@@ -5,6 +5,7 @@ import { useStateMachine } from 'little-state-machine';
 import updateAction from '../../store/updateAction';
 import StepContainer from '../../components/stepContainer';
 import NavigateButton from '../../components/navigateButton';
+import ModalitiesMock from '../../mock/modalities.mock';
 
 function Step5() {
   const history = useHistory();
@@ -27,10 +28,11 @@ function Step5() {
             A modalidade da minha entrega é
             <span className="select is-primary is-rounded ml-2">
               <select name="modality" ref={register}>
-                <option value="1">VAREJO</option>
-                <option value="2">ATACADO</option>
-                <option value="3">INDÚSTRIA</option>
-                <option value="4">CONSTRUÇÃO</option>
+                {ModalitiesMock.map((modality) => (
+                  <option key={modality.id} value={modality.name}>
+                    {modality.name}
+                  </option>
+                ))}
               </select>
             </span>
           </p>
