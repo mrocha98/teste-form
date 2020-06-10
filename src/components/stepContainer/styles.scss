@@ -1,21 +1,6 @@
-@import '../../styles/colors';
-
 .step-container {
   .box {
     min-height: 70vh;
-
-    .container--top {
-      display: flex;
-      justify-content: space-between;
-
-      button {
-        color: $plum;
-
-        &:last-child svg {
-          font-size: 14px;
-        }
-      }
-    }
 
     .content {
       display: flex;
