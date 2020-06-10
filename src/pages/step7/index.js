@@ -5,7 +5,7 @@ import { useStateMachine } from 'little-state-machine';
 import updateAction from '../../store/updateAction';
 import StepContainer from '../../components/stepContainer';
 import NavigateButton from '../../components/navigateButton';
-import TypesMock from '../../mock/types.mock';
+import VehicleTypesMock from '../../mock/vehicleTypes.mock';
 import '../../styles/checkbox.scss';
 
 function Step7() {
@@ -21,10 +21,16 @@ function Step7() {
     history.push(nextDestination);
   };
 
+  const name = 'vehicleTypes';
+
   const handleCheckAll = useCallback(() => {
-    const values = getValues('types');
+    const values = getValues(name);
+    if (values.length === 0) {
+      const arr = Array(VehicleTypesMock.length).fill();
+      arr.forEach(() => values.push(false));
+    }
     const allValuesChecked = values.map(() => true);
-    setValue('types', allValuesChecked);
+    setValue(name, allValuesChecked);
   }, [getValues, setValue]);
 
   return (
@@ -37,9 +43,9 @@ function Step7() {
         </div>
         <div className="control my-5">
           <div className="checkbox-container">
-            {TypesMock.map((type, i) => (
+            {VehicleTypesMock.map((type, i) => (
               <label className="checkbox" key={type.id}>
-                <input className="mx-2" type="checkbox" name={`types[${i}]`} ref={register} />
+                <input className="mx-2" type="checkbox" name={`${name}[${i}]`} ref={register} />
                 {type.name}
               </label>
             ))}
