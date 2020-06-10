@@ -21,6 +21,9 @@ export default function StoreProvider({ children }) {
         origin: '',
         destiny: '',
       },
+      vehicleTypes: [],
+      bodyworkTypes: [],
+      technologyTypes: [],
     },
   });
 
