@@ -21,6 +21,7 @@ export default function StoreProvider({ children }) {
         origin: '',
         destiny: '',
       },
+      types: [],
     },
   });
 
