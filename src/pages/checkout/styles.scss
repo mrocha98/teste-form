@@ -1,0 +1,42 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.checkout-container {
+  .box {
+    min-height: 70vh;
+
+    .content-list {
+      @include smart-columns;
+
+      @media (max-width: 690px) {
+        &--mobile-border {
+          border: 1px dashed $plum;
+          margin: 1em;
+          padding: 0.75em;
+        }
+      }
+    }
+
+    .submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2em;
+
+      button {
+        font-size: 2em;
+        font-weight: bold;
+        width: 400px;
+
+        @media (max-width: 690px) {
+          font-size: 1.5em;
+          width: 200px;
+        }
+
+        @media (max-width: 368px) {
+          width: 124px;
+        }
+      }
+    }
+  }
+}

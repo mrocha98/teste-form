@@ -10,11 +10,13 @@ import Step7 from './pages/step7';
 import Step8 from './pages/step8';
 import Step9 from './pages/step9';
 import Step10 from './pages/step10';
+import Checkout from './pages/checkout';
 import NotFound from './pages/notFound';
 
 export default function Routes() {
   return (
     <Switch>
+      <Route path="/checkout" component={Checkout} />
       <Route path="/step-1" component={Step1} />
       <Route path="/step-2" component={Step2} />
       <Route path="/step-3" component={Step3} />
@@ -25,6 +27,7 @@ export default function Routes() {
       <Route path="/step-8" component={Step8} />
       <Route path="/step-9" component={Step9} />
       <Route path="/step-10" component={Step10} />
+      <Route path="/step-11" render={() => <Redirect to="/checkout" />} />
       <Route path="/" exact render={() => <Redirect to="/step-1" />} />
       <Route path="*" component={NotFound} />
     </Switch>
