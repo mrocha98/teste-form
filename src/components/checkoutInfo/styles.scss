@@ -1,0 +1,12 @@
+.checkout-info {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+
+    .circle {
+      margin-right: 1em;
+    }
+  }
+}

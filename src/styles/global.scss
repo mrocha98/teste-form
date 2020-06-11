@@ -1,0 +1,41 @@
+@import './colors';
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+.field {
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+      color: $plum;
+      font-weight: bold;
+      text-decoration: underline;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 800px) {
+    p {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+}
+
+.control {
+  .radio,
+  .checkbox {
+    font-size: 1.2rem;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      transform: scale(1.5);
+    }
+  }
+}
