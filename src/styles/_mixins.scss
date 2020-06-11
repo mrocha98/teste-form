@@ -1,0 +1,17 @@
+@mixin smart-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10em);
+  place-content: flex-start;
+  gap: 0.5rem;
+
+  p {
+    word-break: break-word;
+    max-width: 20ch;
+    min-width: 5ch;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    columns: 2;
+  }
+}

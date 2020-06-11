@@ -6,6 +6,7 @@ import TextArea from 'react-textarea-autosize';
 import updateAction from '../../store/updateAction';
 import StepContainer from '../../components/stepContainer';
 import NavigateButton from '../../components/navigateButton';
+import './styles.scss';
 
 function Step10() {
   const history = useHistory();
@@ -22,7 +23,7 @@ function Step10() {
 
   return (
     <StepContainer stepNumber={step} title="Tem alguma observação?">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="step-10" onSubmit={handleSubmit(onSubmit)}>
         <div className="field">
           <TextArea className="textarea has-fixed-size" ref={register} name="observation" />
         </div>

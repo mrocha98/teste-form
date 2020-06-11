@@ -1,0 +1,26 @@
+.step-5 {
+  .field {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .subtitle {
+      margin-bottom: 1em;
+    }
+
+    .select {
+      max-width: 600px;
+      width: 50%;
+    }
+
+    @media (min-width: 680px) {
+      flex-direction: row;
+      justify-content: space-around;
+
+      .subtitle {
+        margin: 0;
+      }
+    }
+  }
+}

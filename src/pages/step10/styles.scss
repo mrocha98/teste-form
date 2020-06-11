@@ -1,0 +1,14 @@
+.step-10 {
+  .field {
+    display: flex;
+    justify-content: center;
+    .textarea {
+      min-width: unset;
+      width: 15rem;
+
+      @media (min-width: 550px) {
+        width: 25rem;
+      }
+    }
+  }
+}

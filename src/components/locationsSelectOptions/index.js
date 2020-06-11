@@ -10,7 +10,7 @@ function LocationsSelectOptions({ hash }) {
           cida_descricao,
           esta_estado: { esta_sigla },
         } = cida_cidade;
-        const value = `${refe_descricao} - ${refe_endereco_empresa_terceiro} - ${cida_descricao} - ${esta_sigla}`;
+        const value = `${refe_descricao} / ${refe_endereco_empresa_terceiro} / ${cida_descricao} / ${esta_sigla}`;
         return (
           <option key={`${hash}-${refe_codigo}`} value={value}>
             {value}
