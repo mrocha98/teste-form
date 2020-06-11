@@ -11,3 +11,5 @@ export const parseOriginWithMock = (origin, mock) => {
   const parsed = activatedItems.map((item) => mock[item.position]);
   return parsed;
 };
+
+export const getNames = (origin, mock) => parseOriginWithMock(origin, mock).map((item) => item.name);
