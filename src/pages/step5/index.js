@@ -6,6 +6,7 @@ import updateAction from '../../store/updateAction';
 import StepContainer from '../../components/stepContainer';
 import NavigateButton from '../../components/navigateButton';
 import ModalitiesMock from '../../mock/modalities.mock';
+import './styles.scss';
 
 function Step5() {
   const history = useHistory();
@@ -22,20 +23,18 @@ function Step5() {
 
   return (
     <StepContainer stepNumber={step} title="Deseja categorizar a entrega?">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="step-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="field">
-          <p className="subtitle">
-            A modalidade da minha entrega é
-            <span className="select is-primary is-rounded ml-2">
-              <select name="modality" ref={register}>
-                {ModalitiesMock.map((modality) => (
-                  <option key={modality.id} value={modality.name}>
-                    {modality.name}
-                  </option>
-                ))}
-              </select>
-            </span>
-          </p>
+          <p className="subtitle">A modalidade da minha entrega é</p>
+          <div className="select is-primary is-rounded">
+            <select name="modality" ref={register}>
+              {ModalitiesMock.map((modality) => (
+                <option key={modality.id} value={modality.name}>
+                  {modality.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
         <NavigateButton destination={nextDestination} />
       </form>
