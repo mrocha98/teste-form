@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStateMachine } from 'little-state-machine';
 import StepNavigation from '../../components/stepNavigation';
 import CheckoutInfo from '../../components/checkoutInfo';
@@ -6,10 +6,12 @@ import TitlesMock from '../../mock/titles.mock';
 import VehiclesMock from '../../mock/vehicleTypes.mock';
 import BodyworkMock from '../../mock/bodyworkTypes.mock';
 import TechnologyMock from '../../mock/technologyTypes.mock';
-import { formatDate, formatMoney, parseOriginWithMock } from '../../utils/format';
+import { formatDate, formatMoney, parseOriginWithMock, getNames } from '../../utils/format';
+import alert from '../../utils/alert';
 import './styles.scss';
 
 function Checkout() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const stepNumber = 11;
   const {
     state: { freightage: data },
@@ -59,6 +61,26 @@ function Checkout() {
         ))}
       </>
     );
+  };
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1250)); // simulando chamada à API
+    const submited = data;
+    delete submited.wantsToInsertValue;
+
+    submited.vehicleTypes = getNames(submited.vehicleTypes, VehiclesMock);
+    submited.bodyworkTypes = getNames(submited.bodyworkTypes, BodyworkMock);
+    submited.technologyTypes = getNames(submited.technologyTypes, TechnologyMock);
+
+    const stringifyied = JSON.stringify(submited, null, 2);
+    alert({
+      icon: 'info',
+      title: 'Esse seria o JSON submetido',
+      confirmButtonText: 'Fechar',
+      footer: `<pre>${stringifyied}</pre>`,
+    });
+    setIsSubmitting(false);
   };
 
   return (
@@ -151,7 +173,7 @@ function Checkout() {
             </li>
           </ul>
           <div className="submit">
-            <button type="button" className="button is-info">
+            <button type="button" className={`button is-info ${isSubmitting && 'is-loading'}`} onClick={handleSubmit}>
               Salvar
             </button>
           </div>
