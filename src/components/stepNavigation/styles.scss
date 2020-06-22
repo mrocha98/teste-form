@@ -1,0 +1,20 @@
+@import '../../styles/colors';
+
+.step-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 550px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button {
+    color: $plum !important;
+
+    &:last-child svg {
+      font-size: 14px;
+    }
+  }
+}

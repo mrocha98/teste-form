@@ -1,0 +1,25 @@
+.step-6 {
+  .selects-container {
+    display: grid;
+    gap: 1.5em;
+    place-items: center;
+
+    .control {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @media (min-width: 1080px) {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;
+      }
+
+      .select {
+        max-width: 600px;
+        width: 50%;
+      }
+    }
+  }
+}

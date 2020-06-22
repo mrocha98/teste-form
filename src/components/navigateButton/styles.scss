@@ -1,0 +1,9 @@
+.navigate-button {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 300px;
+
+  @media (max-width: 600px) {
+    width: 200px;
+  }
+}
